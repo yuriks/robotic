@@ -3,6 +3,7 @@
 
 # Visual Studio generated projects
 /*.sdf
+/*.opensdf
 /*.sln
 /*.vcxproj
 /*.vcxproj.*

@@ -1,7 +1,7 @@
 solution "Robotic"
 	configurations { "Debug", "Release" }
 
-	flags { "FatalWarnings", "NoExceptions", "NoRTTI", "Unicode" }
+	flags { "FatalWarnings", "NoRTTI", "Unicode" }
 	warnings "Extra"
 	floatingpoint "Fast"
 	vectorextensions "SSE2"
@@ -12,6 +12,7 @@ solution "Robotic"
 		kind "ConsoleApp"
 		language "C++"
 		files { "src/**.cpp", "src/**.hpp" }
+		includedirs { "src" }
 
 		links { "SDL2" }
 

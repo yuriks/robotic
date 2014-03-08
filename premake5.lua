@@ -11,10 +11,10 @@ solution "Robotic"
 	project "Robotic"
 		kind "ConsoleApp"
 		language "C++"
-		files { "src/**.cpp", "src/**.hpp" }
+		files { "src/**.cpp", "src/**.hpp", "src/**.c", "src/**.h" }
 		includedirs { "src" }
 
-		links { "SDL2" }
+		links { "SDL2", "SDL2main" }
 
 		configuration "Debug"
 			defines { "DEBUG" }
@@ -24,3 +24,10 @@ solution "Robotic"
 		configuration "Release"
 			defines { "NDEBUG" }
 			optimize "On"
+
+		configuration "vs*"
+			defines { "_CRT_SECURE_NO_WARNINGS" }
+
+		configuration "Windows"
+			linkoptions { "/NODEFAULTLIB:msvcrt" }
+			links { "OpenGL32" }

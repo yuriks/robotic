@@ -2,7 +2,9 @@
 #include <cassert>
 
 Game::Game(std::unique_ptr<GameState>&& initial_state) {
-	state_stack.push_back(std::move(initial_state));
+	if (initial_state != nullptr) {
+		state_stack.push_back(std::move(initial_state));
+	}
 }
 
 bool Game::update() {

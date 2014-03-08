@@ -17,7 +17,7 @@ public:
 	/// Runs a game update step. Returns whether to keep the current state for the next update and a new state to push.
 	virtual std::tuple<StateAction, std::unique_ptr<GameState>> update() = 0;
 	/// Updates the screen. This must not modify the state.
-	virtual void draw() const = 0;
+	virtual void draw() = 0;
 };
 
 class Game {
